@@ -15,7 +15,7 @@ body {
     color: #FFFFFF;
 }
 
-.name {
+h1 {
     font-family: Forum,  sans-serif;
     font-size: 30px;
     font-weight: 400;
@@ -48,11 +48,40 @@ body {
     margin-left: 10px;
 }
 
-.main-container {
-    background-image: url("img/Welcome.jpg");
-    background-size: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 400px;
-    width: 400px;
+.section-welcome {
+    background: url(img/Welcome.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+}
+
+.overlay {
+    background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.welcome-card{
+    display: flex;
+    position: absolute;
+    top: 220px;
+    padding: 35px 40px;
+    justify-content: center;
+    align-items: center;
+    background: #0C0C0E;
+}
+
+.welcome-text {
+    width: 520px;
+    color: #FFF;
+    text-align: center;
+    font-family: Forum, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
