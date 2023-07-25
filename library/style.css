@@ -2,10 +2,15 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .header-container {
     height: 90px;
@@ -24,6 +29,17 @@ h1 {
     text-align: left;
     margin-left: 20px;
     margin-right: 454px; 
+}
+
+h2{
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    letter-spacing: 2px;
+    text-transform: capitalize;
 }
 
 .nav-list {
@@ -84,4 +100,75 @@ h1 {
     line-height: 50px;
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+
+.section-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    margin-top: 40px;
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.create-line {
+    width: 50px;
+    border-top: 1px solid #0C0C0E;
+    margin-top: 20px;
+}
+
+.images-items {
+    display: flex;
+    justify-content: center;
+}
+
+.images-items img {
+    width: 450px;
+    height: 560px;
+    margin: 20px 12.5px;
+}
+
+.carousel-pagination {
+    display: flex;
+    align-items: center;
+    margin: 15px auto 40px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.carousel-button-active{
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #BB945F;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel-button{
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #0C0C0E;
+    border: 0;
+    cursor: pointer;
 }
