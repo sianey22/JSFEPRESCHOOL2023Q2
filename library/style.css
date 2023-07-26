@@ -1,6 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 body {
@@ -29,11 +33,12 @@ h1 {
     text-align: left;
     margin-left: 20px;
     margin-right: 454px; 
+    color: #FFF;
 }
 
 h2{
     color: #0C0C0E;
-    font-family: Forum;
+    font-family: Forum,sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -51,13 +56,14 @@ h2{
 .nav-item {
     text-decoration: none;
     color: #FFFFFF;
-    font-family: Inter, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
     line-height: 50px;
     letter-spacing: 0em;
     text-align: left;
     margin-right: 30px;
+}
+
+.nav-item:hover { 
+    color: #BB945F;
 }
 
 .icon-profile {
@@ -102,25 +108,19 @@ h2{
     text-transform: uppercase;
 }
 
-.section-about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .description {
     color: #000;
     text-align: center;
-    font-family: Inter;
-    font-size: 20px;
     font-style: normal;
-    font-weight: 400;
     line-height: 40px; 
-    margin-top: 40px;
 }
 
 .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .create-line {
@@ -142,8 +142,8 @@ h2{
 
 .carousel-pagination {
     display: flex;
-    align-items: center;
-    margin: 15px auto 40px;
+    justify-content: center;
+    margin: 15px auto 55px;
 }
 
 .button-container {
@@ -172,3 +172,180 @@ h2{
     border: 0;
     cursor: pointer;
 }
+
+.content-favorites {
+    display: inline;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+.seasons-container{
+    display: flex;
+    width: 710px;
+    height: 24px;
+    justify-content: space-between;
+    margin: 35px 14px 45px;
+}
+
+.radiobutton-label {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.radio-season{
+    font-style: normal;
+    line-height: normal;
+}
+
+.radiobutton:checked~.radio-season{
+    font-weight: 700;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-right: 14px;
+    margin-top: 5px;
+    vertical-align: text-top;
+    position: relative;
+}
+
+.custom-radio::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.radiobutton:checked + .custom-radio::before {
+    display: block;
+}
+
+.radiobutton {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1397px;
+    justify-content: space-between;
+}
+
+.book-card {
+    width: 508px;
+    height: 524px;
+    flex-shrink: 0;
+    margin: 0 20px 40px;
+    padding: 15px 19px;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.pick-title {
+    color: #000;
+    font-family: Forum, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.book-line {
+    width: 60px;
+    border-top: 1px solid #BB945F;
+    margin-bottom: 20px;
+}
+
+.book-info {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.book-name {
+    text-transform: uppercase;
+}
+
+.book-description {
+    width: 358px;
+    font-size: 15px;
+    line-height: 40px; /* 266.667% */
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.button-buy{
+    width: 75px;
+    height: 30px;
+    color: #0C0C0E;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    background: #FFF;
+    position: absolute;
+    top:510px;
+    cursor: pointer;
+}
+
+.book-img {
+    width: 200px;
+    height: 300px;
+    top: 255px;
+    left: 390px;
+    z-index: 1;
+    position: absolute;
+}
+
+.button-buy:hover { 
+    background: #BB945F;
+    border: 0; 
+}
+
+.button-own{
+    width: 75px;
+    height: 30px;
+    color: #BB945F;
+    text-align: center;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #BB945F;
+    background: #FFF;
+    position: absolute;
+    top:510px;
+}
+
