@@ -349,3 +349,130 @@ h2{
     top:510px;
 }
 
+.content-coffee {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    margin: 0 20px 40px;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 60px;
+}
+
+.menu-title {
+    color: #BB945F;
+    font-family: Forum, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-drinks {
+    text-align: left;
+}
+
+.menu-desserts{
+    text-align: right;
+}
+
+.product-name {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-right: 60px;
+}
+
+.drinks-item {
+    width: 199px;
+}
+
+.desserts-item {
+    width: 215px;
+}
+
+.product-cost {
+    color: #000;
+    font-family: Forum,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-left: 60px;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 40px;
+    height: 40px;
+}
+
+.menu-line {
+    height: 1px;
+    width: 100px;
+    background: #BB945F;
+}
+
+.contacts-info {
+    margin: 0 20px 90px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.contact-title {
+    font-weight: 700;
+}
+
+.mail {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.phone-ref {
+    text-decoration: none;
+}
+
+.info1 {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.phone {
+    margin-bottom: 20px;
+}
+
+.info2 {
+    display:block;
+    margin: 40px 0 20px;
+}
+
+.map-img {
+    width: 696px;
+    position: absolute;
+    left: 704px;
+    top: 0px;
+}
