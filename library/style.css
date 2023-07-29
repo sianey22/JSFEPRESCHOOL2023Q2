@@ -32,7 +32,7 @@ h1 {
     letter-spacing: 0.02em;
     text-align: left;
     margin-left: 20px;
-    margin-right: 454px; 
+    margin-right: 455px; 
     color: #FFF;
 }
 
@@ -55,7 +55,7 @@ h2{
 
 .nav-item {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #FFF;
     line-height: 50px;
     letter-spacing: 0em;
     text-align: left;
@@ -67,6 +67,8 @@ h2{
 }
 
 .icon-profile {
+    display: flex;
+    align-items: center;
     margin-left: 10px;
 }
 
@@ -186,10 +188,27 @@ h2{
 
 .seasons-container{
     display: flex;
-    width: 710px;
+    width: 714px;
     height: 24px;
     justify-content: space-between;
-    margin: 35px 14px 45px;
+    align-items: center;
+    margin: 40px 15px 40px;
+}
+
+.button-winter {
+    width: 108px;
+}
+
+.button-spring {
+    width: 105px;
+}
+
+.button-summer {
+    width: 120px;
+}
+
+.button-autumn {
+    width: 116px;
 }
 
 .radiobutton-label {
@@ -244,21 +263,26 @@ h2{
     z-index: -1;
 }
 
-.books-container {
+.books-container-1 {
     display: flex;
     flex-wrap: wrap;
-    width: 1397px;
+    width: 1400px;
     justify-content: space-between;
 }
 
+.books-container {
+    display:none;
+}
+
 .book-card {
-    width: 508px;
-    height: 524px;
+    width: 550px;
+    height: 555px;
     flex-shrink: 0;
     margin: 0 20px 40px;
     padding: 15px 19px;
     border: 1px solid #000;
     position: relative;
+    box-sizing: border-box;
 }
 
 .pick-title {
@@ -314,7 +338,8 @@ h2{
     border: 1px solid #0C0C0E;
     background: #FFF;
     position: absolute;
-    top:510px;
+    top: 509px;
+    left: 19px;
     cursor: pointer;
     transition: all 1s ease;
 }
@@ -363,7 +388,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 20px 60px;
+    margin: 0 18px 60px 20px;
 }
 
 .menu-title {
@@ -391,11 +416,11 @@ h2{
     line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-right: 60px;
 }
 
 .drinks-item {
-    width: 199px;
+    width: 196px;
+    white-space: nowrap;
 }
 
 .desserts-item {
@@ -411,7 +436,6 @@ h2{
     line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-left: 60px;
 }
 
 .menu-list {
@@ -431,10 +455,11 @@ h2{
     height: 1px;
     width: 100px;
     background: #BB945F;
+    margin: 0 60px;
 }
 
 .contacts-info {
-    margin: 0 20px 90px;
+    margin: 0 20px 94px;
     color: #000;
     font-style: normal;
     font-weight: 400;
@@ -500,9 +525,10 @@ h2{
     box-sizing: border-box;
     width: 600px;
     height: 386px;
-    padding: 20px;
+    padding: 17px;
     margin-top: 30px;
     border: 3px solid #BB945F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .card-inputs {
@@ -614,7 +640,6 @@ h2{
 
 .button-log {
     margin-left: 20px;
-    align-items: flex-end;
 }
 
 .button-get:hover { 
@@ -630,10 +655,12 @@ h2{
 .footer-part1, .footer-part2{
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .footer-part2 {
     margin-top: 10px;
+    align-items: center;
 }
 
 .footer-text {
@@ -652,9 +679,15 @@ h2{
 .media-links-list {
     display: flex;
     align-items: center;
-    width: 102px;
+    width: 107px;
     justify-content: space-between;
     list-style: none;
+}
+
+.media-links-list a {
+    width: 28px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-part3 {
@@ -679,4 +712,17 @@ h2{
 .rolling-scopes-link {
     margin-left: 494px;
     margin-right: 437px;
+}
+
+.footer-link, .footer-link-icon {
+    transition: all 1s ease;
+}
+
+.footer-link:hover{
+    color: #BB945F;
+}
+
+.footer-link-icon:hover{
+    width: 28px;
+    height: 28px;
 }
