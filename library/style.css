@@ -35,6 +35,7 @@ h2{
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .header-container {
@@ -163,6 +164,10 @@ h2{
     width: 50px;
     border-top: 1px solid #0C0C0E;
     margin-top: 20px;
+}
+
+.arrows {
+    display: none;
 }
 
 .images-items {
@@ -904,5 +909,22 @@ h2{
 
     .rolling-scopes-link {
         padding-left: 0;
+    }
+
+    .about {
+        position: relative;
+    }
+    .arrows {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 10%;
+        position:absolute;
+        top: 490px;
+    }
+
+    .arrows button {
+        border:0;
+        background-color: #FFF;
     }
 }
