@@ -7,22 +7,9 @@
     font-weight: 400;
 }
 
-body {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 html {
     scroll-behavior: smooth;
   }
-
-.header-container {
-    height: 90px;
-    display: flex;
-    align-items: center;
-    background-color:#0C0C0E;
-    color: #FFFFFF;
-}
 
 h1 {
     font-family: Forum,  sans-serif;
@@ -30,9 +17,7 @@ h1 {
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0.02em;
-    text-align: left;
-    margin-left: 20px;
-    margin-right: 455px; 
+    text-align: left; 
     color: #FFF;
 }
 
@@ -45,6 +30,55 @@ h2{
     line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    background-color:#0C0C0E;
+    color: #FFFFFF;
+}
+
+.menu-icon-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.menu-burger-button {
+    display: none;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    background: #0C0C0E;
+    border: 0;
+}
+
+.menu-burger-button span {
+    display: block;
+    background: #FFF;
+    width: 45px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    transition: 1s;
+}
+
+.menu-burger-button span:nth-child(2) {
+    transform:translateY(-10px)
+}
+
+.menu-burger-button span:nth-child(3) {
+    transform:translateY(10px)
 }
 
 .nav-list {
@@ -70,6 +104,7 @@ h2{
     display: flex;
     align-items: center;
     margin-left: 10px;
+    z-index: 2;
 }
 
 .section-welcome {
@@ -131,21 +166,31 @@ h2{
     margin-top: 20px;
 }
 
+.arrows {
+    display: none;
+}
+
 .images-items {
     display: flex;
     justify-content: center;
+    column-gap: 25px;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.images-items img {
-    width: 450px;
-    height: 560px;
-    margin: 20px 12.5px;
+.img-wrapper img {
+    max-width: 450px;
+    width: 100%;
 }
 
 .carousel-pagination {
     display: flex;
     justify-content: center;
-    margin: 15px auto 55px;
+    margin: 10px auto 55px;
+}
+
+.carousel-pagination .button-container:nth-child(n+4){
+    display: none;
 }
 
 .button-container {
@@ -175,6 +220,10 @@ h2{
     cursor: pointer;
 }
 
+.carousel-button:hover { 
+    background-color: #BB945F;
+}
+
 .content-favorites {
     display: inline;
     text-align: center;
@@ -188,7 +237,7 @@ h2{
 
 .seasons-container{
     display: flex;
-    width: 714px;
+    max-width: 714px;
     height: 24px;
     justify-content: space-between;
     align-items: center;
@@ -266,7 +315,7 @@ h2{
 .books-container-1 {
     display: flex;
     flex-wrap: wrap;
-    width: 1400px;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -274,11 +323,15 @@ h2{
     display:none;
 }
 
+.book {
+    width: 590px;
+    margin: 0 20px 40px;
+}
+
 .book-card {
     width: 550px;
     height: 555px;
     flex-shrink: 0;
-    margin: 0 20px 40px;
     padding: 15px 19px;
     border: 1px solid #000;
     position: relative;
@@ -381,7 +434,7 @@ h2{
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 2px;
-    margin: 0 20px 40px;
+    margin: 0 19px 40px;
 }
 
 .menu-container{
@@ -458,15 +511,22 @@ h2{
     margin: 0 60px;
 }
 
+.contact-wrapper {
+    display: flex;
+    margin: 0 20px 60px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
 .contacts-info {
-    margin: 0 20px 94px;
     color: #000;
+    width: 505px;
+    margin-right: auto;
     font-style: normal;
     font-weight: 400;
     line-height: 40px; /* 200% */
     letter-spacing: 2px;
     text-transform: capitalize;
-    position: relative;
 }
 
 .contact-title {
@@ -496,11 +556,12 @@ h2{
     margin: 40px 0 20px;
 }
 
+.map-wrapper {
+    max-height: 414px;
+}
+
 .map-img {
-    width: 696px;
-    position: absolute;
-    left: 704px;
-    top: 0px;
+    max-width: 100%;
 }
 
 .library-card {
@@ -510,6 +571,10 @@ h2{
 .digital-card-container{
     display: flex;
     justify-content: space-between;
+}
+
+.check-card {
+    width: 600px;
 }
 
 .check-card-title {
@@ -692,7 +757,7 @@ h2{
 
 .footer-part3 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     border-top: 1px solid #FFF;
     padding-top: 44px; 
@@ -710,8 +775,7 @@ h2{
 }
 
 .rolling-scopes-link {
-    margin-left: 494px;
-    margin-right: 437px;
+    padding-left: 53px;
 }
 
 .footer-link, .footer-link-icon {
@@ -725,4 +789,142 @@ h2{
 .footer-link-icon:hover{
     width: 28px;
     height: 28px;
+}
+
+@media (max-width: 1260px){
+    .books-container-1 {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .map-wrapper {
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-wrapper {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 1024px){
+    .menu-burger-button {
+        display: block;
+        margin-left: 40px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        position: absolute;
+        box-sizing:border-box;
+        justify-content: space-between;
+        align-items: center;
+        white-space:nowrap;
+        width: 332px;
+        height:570px;
+        background-color: #0C0C0E;
+        padding: 100px 107px;
+        right: -20px;
+        top: -30px;
+        transform: translateX(100%);
+    	transition: transform 1s; 
+    }
+
+    .nav-item {
+        margin-right: 0;
+    }
+
+    .menu-icon-container.active .nav-list{
+        transform: translateX(0);
+    }
+
+    .menu-icon-container.active .menu-burger-button span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+    
+    .menu-icon-container.active .menu-burger-button span:nth-child(1) {
+        opacity: 0;
+    }
+    
+    .menu-icon-container.active .menu-burger-button span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .digital-card-container {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .get-card {
+        width: 600px;
+        margin-top: 21px;
+    }
+
+    .get-card *{
+        text-align: center;
+        
+    }
+
+    .get-card-info {
+        margin: 40px 0;
+    }
+
+    .get-card-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 960px){
+    .menu-container {
+        flex-direction:column;
+    }
+
+    .menu-desserts .menu-title {
+        margin-top: 40px;
+    }
+    
+    .menu-desserts .menu-item{
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px){
+    .images-items .img-wrapper:nth-child(n+2) {
+        display:none;
+    }
+
+    .carousel-pagination .button-container:nth-child(n+4){
+        display: flex;
+    }
+
+    .description {
+        padding: 0px 20px;
+    }
+
+    .images-items{
+        padding-bottom: 5px;
+    }
+
+    .rolling-scopes-link {
+        padding-left: 0;
+    }
+
+    .about {
+        position: relative;
+    }
+    .arrows {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 10%;
+        position:absolute;
+        top: 490px;
+    }
+
+    .arrows button {
+        border:0;
+        background-color: #FFF;
+    }
 }
