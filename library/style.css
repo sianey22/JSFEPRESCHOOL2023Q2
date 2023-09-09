@@ -114,6 +114,40 @@ h2{
     background: #BB945F;
 }
 
+.profile {
+    width: 80px;
+    height: 115px;
+    background-color: #FFF;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+.profile-line {
+    width: 40px;
+    border-top: 1px solid #BB945F;;
+    margin: 5px auto 10px;
+}
+
+.profile-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.profile-button {
+    background-color:#FFF;
+    border: 0;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.profile-button:hover{
+    text-decoration: underline;
+}
+
 .section-welcome {
     background: url(img/Welcome.jpg);
     background-position: center center;
@@ -795,6 +829,183 @@ h2{
 .footer-link-icon:hover{
     width: 28px;
     height: 28px;
+}
+
+.not-active {
+    display: none;
+}
+
+.modals-background {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.window-log-reg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 250px;
+    background-color: #FFF;
+    padding: 20px 25px;
+    box-sizing: border-box;
+}
+
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFF;
+    border: 0;
+    margin: 15px;
+}
+
+.log-reg-label{
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.log-reg-input{
+    padding: 0 5px;
+    border: 1px solid #BB945F;
+    width: 100%;
+    height: 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.window-title {
+    font-family: Forum;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.log-reg-submit-btn{
+    display: block;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    background-color: #FFF;
+    width: 75px;
+    height: 30px;
+    padding: 9px 0;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.log-reg-question{
+    color: #000;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+.log-reg-link {
+    color: #0C0C0E;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+}
+
+.modal-profile {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 600px;
+    height: 403px;
+    box-sizing: border-box;
+}
+
+.modal-profile-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    width: 170px;
+    padding: 139px 25px;
+}
+
+.profile-initials {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.profile-initials span {
+    color: #BB945F;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px; 
+    text-transform: capitalize; 
+}
+
+.profile-name {
+    width: 120px; 
+    text-align: center;
+    background-color: #FFF;
+    margin-top: 15px;
+    padding: 4px 15px;
+    box-sizing: border-box;
+}
+
+.profile-name span {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.modal-profile-right {
+    width: 600px;
+    padding: 40px 20px;
+    background-color: #FFF;
+}
+
+.profile-title {
+    font-family: Forum;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.profile-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.option img {
+    width: 20px;
 }
 
 @media (max-width: 1260px){

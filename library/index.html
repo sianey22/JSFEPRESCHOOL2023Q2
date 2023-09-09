@@ -35,6 +35,12 @@
                 <button class="icon-profile">
                     <img src="icon/icon_profile.svg" alt="Icon Profile">
                 </button>
+                <div class="profile">
+                    <span class="profile-title">Profile</span>
+                    <div class="profile-line"></div>
+                    <button class="profile-button log-in">Log In</button>
+                    <button class="profile-button register">Register</button>
+                </div>
                 <button class="menu-burger-button">
                     <span></span>
                     <span></span>
@@ -489,7 +495,80 @@
                 </a>
             </div>
         </footer>
-        <script src="index.js"></script>
-        <script src="burger.js"></script>
     </div>
+    <!--Modal windows-->
+    <div class="modals-background"></div>
+    <!--LogIn-->
+    <div class="window-log-reg not-active">
+        <button class="close-btn">
+            <img src="icon/close_btn.svg" alt="close_btn">
+        </button>
+        <p class="window-title">Login</p>
+        <form>
+            <label class="log-reg-label">E-mail or readers card
+              <input class="log-reg-input" type="email">
+            </label>
+            <label class="log-reg-label">Password
+                <input class="log-reg-input" type="password">
+            </label>
+            <button class="log-reg-submit-btn" type="submit">Log In</button>
+            <span class="log-reg-question">Don’t have an account?</span>
+            <span class="log-reg-link">Register</span>
+        </form>
+    </div>
+    <div class="window-log-reg not-active">
+        <button class="close-btn">
+            <img src="icon/close_btn.svg" alt="close_btn">
+        </button>
+        <p class="window-title">Register</p>
+        <form>
+            <label class="log-reg-label">First name
+              <input class="log-reg-input" type="text">
+            </label>
+            <label class="log-reg-label">Last name
+                <input class="log-reg-input" type="text">
+            </label>
+            <label class="log-reg-label">E-mail
+                <input class="log-reg-input" type="email">
+            </label>
+            <label class="log-reg-label">Password
+                <input class="log-reg-input" type="password">
+            </label>
+            <button class="log-reg-submit-btn" type="submit">Sign Up</button>
+            <span class="log-reg-question">Already have an account?</span>
+            <span class="log-reg-link">Login</span>
+        </form>
+    </div>
+    <div class="modal-profile">
+        <div class="modal-profile-left">
+            <div class="profile-initials">
+                <span>JD</span>
+            </div>
+            <div class="profile-name">
+                <span>John Doe</span>
+            </div>
+        </div>
+        <div class="modal-profile-right">
+            <p class="profile-title">My profile</p>
+            <div class="profile-options">
+                <div class="option">
+                    <span>Visits</span>
+                    <img src="icon/Union.svg" alt="icon-union">
+                    <span>23</span>
+                </div>
+                <div class="option">
+                    <span>Bonuses</span>
+                    <img src="icon/Star 1.svg" alt="icon-bonuses">
+                    <span>1230</span>
+                </div>
+                <div class="option">
+                    <span>Books</span>
+                    <img src="icon/book.svg" alt="icon-book">
+                    <span>2</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="burger.js"></script>
 </body>
