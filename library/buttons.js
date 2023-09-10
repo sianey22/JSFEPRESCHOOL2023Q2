@@ -61,6 +61,7 @@ const closeModal=(e)=>{
 const openAndClose=(e1, e2)=>{
     openModal(e1);
     closeModal(e2);
+    modalBackground.classList.remove('not-active');
 }
 
 profileLoginButton.addEventListener('click',() =>openModal(modalLoginRegister[0]));

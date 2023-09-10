@@ -35,7 +35,7 @@ h2{
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .header-container {
@@ -105,14 +105,38 @@ h2{
     align-items: center;
     margin-left: 10px;
     z-index: 2;
+    cursor: pointer;
+    border: 0;
+    background: #000;
+}
+
+.icon-profile img {
     background: #000;
     border: 0;
     border-radius: 50%;
-    cursor: pointer;
 }
 
-.icon-profile:hover { 
-    background: #BB945F;
+.profile-in {
+    display: none;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+.profile-in span {
+    color: #BB945F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.icon-profile :hover{
+    background-color: #BB945F;
+    color:#000;
 }
 
 .profile {
@@ -153,6 +177,10 @@ h2{
 
 .profile-button:hover{
     text-decoration: underline;
+}
+
+.profile-with-auth{
+    display: none;
 }
 
 .section-welcome {
@@ -228,6 +256,7 @@ h2{
     width: calc(98.26%/3);
     margin-right: 1.74%;
     object-fit: cover;
+    transition: 2s;
 }
 
 .carousel-pagination {
@@ -280,6 +309,11 @@ h2{
     font-weight: 700;
     line-height: normal;
     margin-left: 20px;
+}
+
+.favorites {
+    position: relative;
+    height: 1419px;
 }
 
 .seasons-container{
@@ -359,15 +393,20 @@ h2{
     z-index: -1;
 }
 
-.books-container-1 {
+.books-container.active {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+
+.books-container {
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-}
-
-.books-container {
-    display:none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .book {
@@ -901,6 +940,10 @@ h2{
     transition: 1s;
 }
 
+.window-log-reg input:invalid {
+    border-color: rgb(201, 24, 24);
+}
+
 .close-btn{
     position: absolute;
     top: 0;
@@ -1182,7 +1225,11 @@ h2{
 }
 
 @media (max-width: 1260px){
-    .books-container-1 {
+    .favorites {
+        height: 2608px;
+    }
+
+    .books-container {
         flex-direction: column;
         align-items:center;
     }
@@ -1281,6 +1328,14 @@ h2{
 }
 
 @media (max-width: 768px){
+
+    .seasons-container{
+        background: #FFF;
+        z-index: 20;
+        position:sticky;
+        top:0;
+    }
+
     .images-items .img-wrapper:nth-child(n+2) {
         display:none;
     }
