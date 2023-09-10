@@ -108,6 +108,7 @@ h2{
     background: #000;
     border: 0;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .icon-profile:hover { 
@@ -123,6 +124,12 @@ h2{
     right: 0;
     text-align: center;
     padding: 5px;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.menu-icon-container.active-profile .profile{
+    opacity: 1;
 }
 
 .profile-line {
@@ -866,7 +873,8 @@ h2{
 }
 
 .not-active {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .modals-background {
@@ -877,6 +885,7 @@ h2{
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.8);
+    transition: 1s;
 }
 
 .window-log-reg {
@@ -889,6 +898,7 @@ h2{
     background-color: #FFF;
     padding: 20px 25px;
     box-sizing: border-box;
+    transition: 1s;
 }
 
 .close-btn{
@@ -898,6 +908,7 @@ h2{
     background: #FFF;
     border: 0;
     margin: 15px;
+    cursor:pointer;
 }
 
 .modal-label{
@@ -951,6 +962,7 @@ h2{
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration-line: underline;
+    cursor: pointer;
 }
 
 .modal {
