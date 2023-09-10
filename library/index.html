@@ -34,7 +34,22 @@
                 </nav>
                 <button class="icon-profile">
                     <img src="icon/icon_profile.svg" alt="Icon Profile">
+                    <div class="profile-in">
+                        <span>JD</span>
+                    </div>
                 </button>
+                <div class="profile profile-without-auth">
+                    <span class="profile-title">Profile</span>
+                    <div class="profile-line"></div>
+                    <button class="profile-button log-in">Log In</button>
+                    <button class="profile-button register">Register</button>
+                </div>
+                <div class="profile profile-with-auth">
+                    <span class="profile-title">Profile</span>
+                    <div class="profile-line"></div>
+                    <button class="profile-button profile-btn">My profile</button>
+                    <button class="profile-button log-out-btn">Log Out</button>
+                </div>
                 <button class="menu-burger-button">
                     <span></span>
                     <span></span>
@@ -59,10 +74,10 @@
                     <p>The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 </div>
                 <div class="arrows">
-                    <button>
+                    <button class="prev-button">
                         <img src="icon/Carret_Left.svg" alt="Carret_Left">
                     </button>
-                    <button>
+                    <button class="next-button">
                         <img src="icon/Carret_Right.svg" alt="Carret_Right">
                     </button>
                 </div>
@@ -74,6 +89,7 @@
                         <img src="img/image5.png" alt="image 5">
                 </div>
                 <div class="carousel-pagination">
+                    <!--
                     <div class="button-container">
                         <button class="carousel-button-active"></button>
                     </div>
@@ -89,6 +105,7 @@
                     <div class="button-container">
                         <button class="carousel-button"></button>
                     </div>
+                    -->
                 </div>
             </section>
             <section class="lib-section favorites" id="Favorites">
@@ -99,27 +116,27 @@
                 <p class="content-favorites">Pick favorites of season</p>
                 <div class="seasons-container">
                     <label class="radiobutton-label button-winter">
-                        <input type="radio" class="radiobutton" name="seasons" checked="checked">
+                        <input type="radio" class="radiobutton" name="seasons" checked="checked" value="0">
                         <span class="custom-radio"></span>
                         <span class="radio-season">Winter</span>
                     </label>
                     <label class="radiobutton-label button-spring">
-                        <input type="radio" class="radiobutton" name="seasons">
+                        <input type="radio" class="radiobutton" name="seasons" value="1">
                         <span class="custom-radio"></span>
                         <span class="radio-season">Spring</span>
                     </label>
                     <label class="radiobutton-label button-summer">
-                        <input type="radio" class="radiobutton" name="seasons">
+                        <input type="radio" class="radiobutton" name="seasons" value="2">
                         <span class="custom-radio"></span>
                         <span class="radio-season">Summer</span>
                     </label>
                     <label class="radiobutton-label button-autumn">
-                        <input type="radio" class="radiobutton" name="seasons">
+                        <input type="radio" class="radiobutton" name="seasons" value="3">
                         <span class="custom-radio"></span>
                         <span class="radio-season">Autumn</span>
                     </label>
                 </div>
-                <div class="books-container-1">
+                <div class="books-container active">
                     <div class="book">
                         <div class="book-card">
                             <div class="card-title">
@@ -169,146 +186,170 @@
                             <p class="book-info book-author">By Clive Irving</p>
                             <p class="book-description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
                             <img class="book-img" src="img/winter-book4.png" alt="fourth book">
-                            <button class="button-own" disabled>Own</button>
+                            <button class="button-buy">Buy</button>
                         </div>
                     </div>
                 </div>
                 <div class="books-container">
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">The Body</p>
+                            <p class="book-info book-author">By Stephen King</p>
+                            <p class="book-description">Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.</p>
+                            <img class="book-img" src="img/spring-book1.png" alt="First book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">The Body</p>
-                        <p class="book-info book-author">By Stephen King</p>
-                        <p class="book-description">Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.</p>
-                        <img class="book-img" src="img/spring-book1.png" alt="First book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Carry: A Memoir of Survival on Stolen Land</p>
+                            <p class="book-info book-author">By Toni Jenson</p>
+                            <p class="book-description">This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
+                            <img class="book-img" src="img/spring-book2.png" alt="Second book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">Carry: A Memoir of Survival on Stolen Land</p>
-                        <p class="book-info book-author">By Toni Jenson</p>
-                        <p class="book-description">This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
-                        <img class="book-img" src="img/spring-book2.png" alt="Second book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Days of Distraction</p>
+                            <p class="book-info book-author">By Alexandra Chang</p>
+                            <p class="book-description">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
+                            <img class="book-img" src="img/spring-book3.png" alt="third book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">Days of Distraction</p>
-                        <p class="book-info book-author">By Alexandra Chang</p>
-                        <p class="book-description">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
-                        <img class="book-img" src="img/spring-book3.png" alt="third book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Dominicana</p>
+                            <p class="book-info book-author">By Angie Cruz</p>
+                            <p class="book-description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
+                            <img class="book-img" src="img/spring-book4.png" alt="fourth book">
+                            <button class="button-buy" disabled>Buy</button>
                         </div>
-                        <p class="book-info book-name">Dominicana</p>
-                        <p class="book-info book-author">By Angie Cruz</p>
-                        <p class="book-description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
-                        <img class="book-img" src="img/spring-book4.png" alt="fourth book">
-                        <button class="button-own" disabled>Own</button>
-                    </div>
-                </div>
-                <div class="books-container">
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
-                        </div>
-                        <p class="book-info book-name">Crude: A Memoir</p>
-                        <p class="book-info book-author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
-                        <p class="book-description">Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people</p>
-                        <img class="book-img" src="img/summer-book1.png" alt="First book">
-                        <button class="button-buy">Buy</button>
-                    </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
-                        </div>
-                        <p class="book-info book-name">Let My People Go Surfing</p>
-                        <p class="book-info book-author">By Yvon Chouinard</p>
-                        <p class="book-description">Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
-                        <img class="book-img" src="img/summer-book2.png" alt="Second book">
-                        <button class="button-buy">Buy</button>
-                    </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
-                        </div>
-                        <p class="book-info book-name">The Octopus Museum: Poems</p>
-                        <p class="book-info book-author">By Brenda Shaughnessy</p>
-                        <p class="book-description">This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
-                        <img class="book-img" src="img/summer-book3.png" alt="third book">
-                        <button class="button-buy">Buy</button>
-                    </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
-                        </div>
-                        <p class="book-info book-name">Shark Dialogues: A Novel</p>
-                        <p class="book-info book-author">By Kiana Davenport</p>
-                        <p class="book-description">An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.</p>
-                        <img class="book-img" src="img/summer-book4.png" alt="fourth book">
-                        <button class="button-buy" disabled>Buy</button>
                     </div>
                 </div>
                 <div class="books-container">
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Crude: A Memoir</p>
+                            <p class="book-info book-author">By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+                            <p class="book-description">Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people</p>
+                            <img class="book-img" src="img/summer-book1.png" alt="First book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">Casual Conversation</p>
-                        <p class="book-info book-author">By Renia White</p>
-                        <p class="book-description">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. </p>
-                        <img class="book-img" src="img/autumn-book1.png" alt="First book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Let My People Go Surfing</p>
+                            <p class="book-info book-author">By Yvon Chouinard</p>
+                            <p class="book-description">Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
+                            <img class="book-img" src="img/summer-book2.png" alt="Second book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">The Great Fire</p>
-                        <p class="book-info book-author">By Lou Ureneck</p>
-                        <p class="book-description">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
-                        <img class="book-img" src="img/autumn-book2.png" alt="Second book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">The Octopus Museum: Poems</p>
+                            <p class="book-info book-author">By Brenda Shaughnessy</p>
+                            <p class="book-description">This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
+                            <img class="book-img" src="img/summer-book3.png" alt="third book">
+                            <button class="button-buy">Buy</button>
                         </div>
-                        <p class="book-info book-name">Rickey: The Life and Legend</p>
-                        <p class="book-info book-author">By Howard Bryant</p>
-                        <p class="book-description">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
-                        <img class="book-img" src="img/autumn-book3.png" alt="third book">
-                        <button class="button-buy">Buy</button>
                     </div>
-                    <div class="book-card">
-                        <div class="card-title">
-                            <h3 class="pick-title">Staff Picks</h3>
-                            <div class="book-line"></div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Shark Dialogues: A Novel</p>
+                            <p class="book-info book-author">By Kiana Davenport</p>
+                            <p class="book-description">An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.</p>
+                            <img class="book-img" src="img/summer-book4.png" alt="fourth book">
+                            <button class="button-buy" disabled>Buy</button>
                         </div>
-                        <p class="book-info book-name">Slug: And Other Stories</p>
-                        <p class="book-info book-author">By Megan Milks</p>
-                        <p class="book-description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
-                        <img class="book-img" src="img/autumn-book4.png" alt="fourth book">
-                        <button class="button-buy" disabled>Buy</button>
+                    </div>
+                </div>
+                <div class="books-container">
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Casual Conversation</p>
+                            <p class="book-info book-author">By Renia White</p>
+                            <p class="book-description">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity. </p>
+                            <img class="book-img" src="img/autumn-book1.png" alt="First book">
+                            <button class="button-buy">Buy</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">The Great Fire</p>
+                            <p class="book-info book-author">By Lou Ureneck</p>
+                            <p class="book-description">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide</p>
+                            <img class="book-img" src="img/autumn-book2.png" alt="Second book">
+                            <button class="button-buy">Buy</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Rickey: The Life and Legend</p>
+                            <p class="book-info book-author">By Howard Bryant</p>
+                            <p class="book-description">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
+                            <img class="book-img" src="img/autumn-book3.png" alt="third book">
+                            <button class="button-buy">Buy</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="book-card">
+                            <div class="card-title">
+                                <h3 class="pick-title">Staff Picks</h3>
+                                <div class="book-line"></div>
+                            </div>
+                            <p class="book-info book-name">Slug: And Other Stories</p>
+                            <p class="book-info book-author">By Megan Milks</p>
+                            <p class="book-description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
+                            <img class="book-img" src="img/autumn-book4.png" alt="fourth book">
+                            <button class="button-buy" disabled>Buy</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -437,14 +478,38 @@
                                 <input type="text" class="inputs" placeholder="Card number">
                             </form>
                             <button class="button-check">Check the card</button>
+                            <div class="profile-options">
+                                <div class="option">
+                                    <span class="option-title">Visits</span>
+                                    <img src="icon/Union.svg" alt="icon-union">
+                                    <span class="option-numb">23</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-title">Bonuses</span>
+                                    <img src="icon/Star 1.svg" alt="icon-bonuses">
+                                    <span class="option-numb">1230</span>
+                                </div>
+                                <div class="option">
+                                    <span class="option-title">Books</span>
+                                    <img src="icon/book.svg" alt="icon-book">
+                                    <span class="option-numb">2</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="get-card">
                         <span class="get-card-title">Get a reader card</span>
                         <p class="get-card-info">You will be able to see a reader card after logging into account or you can register a new account</p>
                         <div class="get-card-buttons">
-                            <button class="button-get">Sign Up</button>
+                            <button class="button-get button-sign">Sign Up</button>
                             <button class="button-get button-log">Log in</button>
+                        </div>
+                    </div>
+                    <div class="get-card-log-in">
+                        <span class="get-card-title">Visit your profile</span>
+                        <p class="get-card-info">With a digital library card you get free access to the Library’s wide array of digital resources including e-books, databases, educational resources, and more.</p>
+                        <div class="get-card-buttons">
+                            <button class="button-get">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -489,7 +554,139 @@
                 </a>
             </div>
         </footer>
-        <script src="index.js"></script>
-        <script src="burger.js"></script>
     </div>
+    <!--Modal windows-->
+    <div class="modals-background not-active"></div>
+    <!--LogIn-->
+    <div class="window-log-reg window-log-in not-active">
+        <button class="close-btn">
+            <img src="icon/close_btn.svg" alt="close_btn">
+        </button>
+        <p class="window-title">Login</p>
+        <form class="log-in-form" action="#">
+            <label class="modal-label">E-mail or readers card
+              <input class="modal-input" name="email" type="email" placeholder=" " required />
+            </label>
+            <label class="modal-label">Password
+                <input class="modal-input" name="password" type="password" placeholder=" " minlength="8" required />
+            </label>
+            <button class="modal-submit-btn log-in-btn" type="submit">Log In</button>
+            <span class="log-reg-question">Don’t have an account?</span>
+            <span class="log-reg-link">Register</span>
+        </form>
+    </div>
+    <!--Register-->
+    <div class="window-log-reg window-sign-up not-active">
+        <button class="close-btn">
+            <img src="icon/close_btn.svg" alt="close_btn">
+        </button>
+        <p class="window-title">Register</p>
+        <form class="sign-up-form" action="#">
+            <label class="modal-label">First name
+              <input class="modal-input" name="first_name" type="text" placeholder=" " required />
+            </label>
+            <label class="modal-label">Last name
+                <input class="modal-input" name="last_name" type="text" placeholder=" " required />
+            </label>
+            <label class="modal-label">E-mail
+                <input class="modal-input" name="email" type="email" placeholder=" " min="1" required />
+            </label>
+            <label class="modal-label">Password
+                <input class="modal-input" name="password" type="password" placeholder=" " minlength="8" required />
+            </label>
+            <button class="modal-submit-btn sign-up-btn" type="submit">Sign Up</button>
+            <span class="log-reg-question">Already have an account?</span>
+            <span class="log-reg-link">Login</span>
+        </form>
+    </div>
+    <!--Profile-->
+    <div class="modal modal-profile not-active">
+        <div class="modal-profile-wrap">
+            <div class="modal-profile-left">
+                <div class="profile-initials">
+                    <span>JD</span>
+                </div>
+                <div class="profile-name">
+                    <span>John Doe</span>
+                </div>
+            </div>
+            <div class="modal-profile-right">
+                <button class="close-btn">
+                    <img src="icon/close_btn.svg" alt="close_btn">
+                </button>
+                <p class="my-profile-title">My profile</p>
+                <div class="profile-options">
+                    <div class="option">
+                        <span class="option-title">Visits</span>
+                        <img src="icon/Union.svg" alt="icon-union">
+                        <span class="option-numb visits">23</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-title">Bonuses</span>
+                        <img src="icon/Star 1.svg" alt="icon-bonuses">
+                        <span class="option-numb">1230</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-title">Books</span>
+                        <img src="icon/book.svg" alt="icon-book">
+                        <span class="option-numb">2</span>
+                    </div>
+                </div>
+                <p class="profile-lst-title">Rented books</p>
+                <ul class="profile-lst">
+                    <li>The Last Queen, Clive Irving</li>
+                    <li>Dominicana, Angie Cruz</li>
+                </ul>
+                <span> Card number</span>&nbsp;
+                <span class="card-numb"> F00234030</span>
+                <img class="copy-button" src="icon/icon copy.svg" alt="copy icon">
+            </div>
+        </div>
+    </div>
+    <!--Buy a card-->
+    <div class="modal modal-buy-card not-active">
+        <div class="buy-card-title">
+            <p>Buy a library card</p>
+            <button class="close-btn">
+                <img src="icon/closebtn2.svg" alt="close_btn">
+            </button>
+        </div>
+        <div class="buy-card-info">
+            <form>
+                <label class="modal-label">Bank card number
+                    <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">Expiration code <br>
+                      <input class="modal-input2" type="text">
+                      <input class="modal-input2" type="text">
+                  </label>
+                  <br>
+                  <label class="modal-label">CVC<br>
+                    <input class="modal-input2 cvc-input" type="text">
+                  </label>
+                  <br>
+                  <label class="modal-label cardholder-name">Cardholder name
+                      <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">Postal code
+                    <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">City / Town
+                      <input class="modal-input" type="text">
+                  </label>
+                  <button class="modal-submit-btn" type="submit">Buy</button>
+                  <span class="card-price">&#36; 25.00</span>
+              </form>
+            </form>
+            <div class="buy-card-discription">
+                <p>If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.</p>
+            </div>
+        </div>
+    </div>
+    <!--JS-->
+    <script src="index.js"></script>
+    <script src="buttons.js"></script>
+    <script src="carousel.js"></script>
+    <script src="radio.js"></script>
+    <script src="auth.js"></script>
 </body>

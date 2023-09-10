@@ -35,7 +35,7 @@ h2{
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .header-container {
@@ -105,13 +105,82 @@ h2{
     align-items: center;
     margin-left: 10px;
     z-index: 2;
+    cursor: pointer;
+    border: 0;
+    background: #000;
+}
+
+.icon-profile img {
     background: #000;
     border: 0;
     border-radius: 50%;
 }
 
-.icon-profile:hover { 
-    background: #BB945F;
+.profile-in {
+    display: none;
+    background-color: #fff;
+    border: 0;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+
+.profile-in span {
+    color: #BB945F;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.icon-profile :hover{
+    background-color: #BB945F;
+    color:#000;
+}
+
+.profile {
+    width: 80px;
+    height: 115px;
+    background-color: #FFF;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    text-align: center;
+    padding: 5px;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.menu-icon-container.active-profile .profile{
+    opacity: 1;
+}
+
+.profile-line {
+    width: 40px;
+    border-top: 1px solid #BB945F;;
+    margin: 5px auto 10px;
+}
+
+.profile-title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.profile-button {
+    background-color:#FFF;
+    border: 0;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.profile-button:hover{
+    text-decoration: underline;
+}
+
+.profile-with-auth{
+    display: none;
 }
 
 .section-welcome {
@@ -187,6 +256,7 @@ h2{
     width: calc(98.26%/3);
     margin-right: 1.74%;
     object-fit: cover;
+    transition: 2s;
 }
 
 .carousel-pagination {
@@ -239,6 +309,11 @@ h2{
     font-weight: 700;
     line-height: normal;
     margin-left: 20px;
+}
+
+.favorites {
+    position: relative;
+    height: 1419px;
 }
 
 .seasons-container{
@@ -318,15 +393,20 @@ h2{
     z-index: -1;
 }
 
-.books-container-1 {
+.books-container.active {
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 1s;
+}
+
+.books-container {
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-}
-
-.books-container {
-    display:none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .book {
@@ -655,6 +735,36 @@ h2{
     transition: all 1s ease;
 }
 
+.check-card-area .profile-options {
+    display: none;
+    gap: 20px;
+    margin-top: 15px;
+    margin-left: 215px;
+}
+
+.check-card-area .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-card-area .option img {
+    width: 20px;
+}
+
+.check-card-area .option-title {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-size: 10px;
+}
+
+.check-card-area .option-numb {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.2px;
+}
+
 .button-check:hover { 
     background: #BB945F;
     border: 0;
@@ -711,6 +821,10 @@ h2{
 
 .button-log {
     margin-left: 20px;
+}
+
+.get-card-log-in {
+    display: none;
 }
 
 .button-get:hover { 
@@ -797,8 +911,336 @@ h2{
     height: 28px;
 }
 
+.not-active {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modals-background {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    transition: 1s;
+}
+
+.window-log-reg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 250px;
+    background-color: #FFF;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.window-log-reg input:invalid {
+    border-color: rgb(201, 24, 24);
+}
+
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFF;
+    border: 0;
+    margin: 15px;
+    cursor:pointer;
+}
+
+.modal-label{
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.modal-input{
+    padding: 0 5px;
+    border: 1px solid #BB945F;
+    width: 100%;
+    height: 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.window-title {
+    font-family: Forum;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.modal-submit-btn{
+    display: block;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    background-color: #FFF;
+    width: 75px;
+    height: 30px;
+    padding: 9px 0;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.modal-submit-btn:hover {
+    background-color: #BB945F;
+}
+
+.log-reg-question{
+    color: #000;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+.log-reg-link {
+    color: #0C0C0E;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.modal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    box-sizing: border-box;
+    position: fixed;
+    transition: 1s;
+}
+
+.modal-profile {
+    width: 600px;
+    height: 403px;
+}
+
+.modal-profile-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-profile-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    width: 170px;
+    padding: 139px 25px;
+}
+
+.profile-initials {
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.profile-initials span {
+    color: #BB945F;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px; 
+    text-transform: capitalize; 
+}
+
+.profile-name {
+    width: 120px; 
+    text-align: center;
+    background-color: #FFF;
+    margin-top: 15px;
+    padding: 4px 15px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.profile-name span {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.modal-profile-right {
+    width: 600px;
+    padding: 40px 20px;
+    background-color: #FFF;
+}
+
+.modal-profile-right .close-btn{
+    margin: 25px;
+}
+
+.my-profile-title {
+    font-family: Forum;
+    font-size: 40px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.modal-profile-right .profile-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.modal-profile-right .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-profile-right .option img {
+    width: 20px;
+}
+
+.modal-profile-right .option-title {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+.modal-profile-right .option-numb {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.2px;
+}
+
+.profile-lst-title {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-lst {
+    margin-bottom: 37px;
+}
+
+.profile-lst li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 2px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.copy-button{
+    cursor: pointer;
+}
+
+.card-numb {
+    margin: 0 10px;
+    color:#BB945F;
+}
+
+.modal-buy-card {
+    width: 650px;
+}
+
+.buy-card-title{
+    padding: 20px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.buy-card-title .close-btn {
+    right: 8px;
+    top: 10px;
+    background-color: #000;
+}
+
+.buy-card-title p {
+    color: #FFF;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.buy-card-info {
+    display: flex;
+    background: #FFF;
+    padding: 27px 40px 40px;
+    gap: 40px;
+}
+
+.buy-card-info form {
+    width: 200px;
+}
+
+.buy-card-info .modal-input{
+    margin: 9px 0 7px;
+}
+
+.modal-input2{
+    padding: 0 5px;
+    border: 1px solid #BB945F;
+    width: 45px;
+    height: 20px;
+    margin: 9px 4px 7px 0;
+    box-sizing: border-box;
+}
+
+.cvc-input{
+    margin-bottom: 20px;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position:absolute;
+    bottom: 40px;
+    left: 140px;
+}
+
+.buy-card-discription{
+    width: 330px;
+    height: 160px;
+}
+
+.buy-card-discription p{
+    color: #8E8E8E;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
 @media (max-width: 1260px){
-    .books-container-1 {
+    .favorites {
+        height: 2608px;
+    }
+
+    .books-container {
         flex-direction: column;
         align-items:center;
     }
@@ -897,6 +1339,14 @@ h2{
 }
 
 @media (max-width: 768px){
+
+    .seasons-container{
+        background: #FFF;
+        z-index: 20;
+        position:sticky;
+        top:0;
+    }
+
     .images-items .img-wrapper:nth-child(n+2) {
         display:none;
     }
