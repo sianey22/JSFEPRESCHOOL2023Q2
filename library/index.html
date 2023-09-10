@@ -505,70 +505,126 @@
         </button>
         <p class="window-title">Login</p>
         <form>
-            <label class="log-reg-label">E-mail or readers card
-              <input class="log-reg-input" type="email">
+            <label class="modal-label">E-mail or readers card
+              <input class="modal-input" type="email">
             </label>
-            <label class="log-reg-label">Password
-                <input class="log-reg-input" type="password">
+            <label class="modal-label">Password
+                <input class="modal-input" type="password">
             </label>
-            <button class="log-reg-submit-btn" type="submit">Log In</button>
+            <button class="modal-submit-btn" type="submit">Log In</button>
             <span class="log-reg-question">Don’t have an account?</span>
             <span class="log-reg-link">Register</span>
         </form>
     </div>
+    <!--Register-->
     <div class="window-log-reg not-active">
         <button class="close-btn">
             <img src="icon/close_btn.svg" alt="close_btn">
         </button>
         <p class="window-title">Register</p>
         <form>
-            <label class="log-reg-label">First name
-              <input class="log-reg-input" type="text">
+            <label class="modal-label">First name
+              <input class="modal-input" type="text">
             </label>
-            <label class="log-reg-label">Last name
-                <input class="log-reg-input" type="text">
+            <label class="modal-label">Last name
+                <input class="modal-input" type="text">
             </label>
-            <label class="log-reg-label">E-mail
-                <input class="log-reg-input" type="email">
+            <label class="modal-label">E-mail
+                <input class="modal-input" type="email">
             </label>
-            <label class="log-reg-label">Password
-                <input class="log-reg-input" type="password">
+            <label class="modal-label">Password
+                <input class="modal-input" type="password">
             </label>
-            <button class="log-reg-submit-btn" type="submit">Sign Up</button>
+            <button class="modal-submit-btn" type="submit">Sign Up</button>
             <span class="log-reg-question">Already have an account?</span>
             <span class="log-reg-link">Login</span>
         </form>
     </div>
-    <div class="modal-profile">
-        <div class="modal-profile-left">
-            <div class="profile-initials">
-                <span>JD</span>
+    <!--Profile-->
+    <div class="modal modal-profile not-active">
+        <div class="modal-profile-wrap">
+            <div class="modal-profile-left">
+                <div class="profile-initials">
+                    <span>JD</span>
+                </div>
+                <div class="profile-name">
+                    <span>John Doe</span>
+                </div>
             </div>
-            <div class="profile-name">
-                <span>John Doe</span>
-            </div>
-        </div>
-        <div class="modal-profile-right">
-            <p class="profile-title">My profile</p>
-            <div class="profile-options">
-                <div class="option">
-                    <span>Visits</span>
-                    <img src="icon/Union.svg" alt="icon-union">
-                    <span>23</span>
+            <div class="modal-profile-right">
+                <button class="close-btn">
+                    <img src="icon/close_btn.svg" alt="close_btn">
+                </button>
+                <p class="my-profile-title">My profile</p>
+                <div class="profile-options">
+                    <div class="option">
+                        <span class="option-title">Visits</span>
+                        <img src="icon/Union.svg" alt="icon-union">
+                        <span class="option-numb">23</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-title">Bonuses</span>
+                        <img src="icon/Star 1.svg" alt="icon-bonuses">
+                        <span class="option-numb">1230</span>
+                    </div>
+                    <div class="option">
+                        <span class="option-title">Books</span>
+                        <img src="icon/book.svg" alt="icon-book">
+                        <span class="option-numb">2</span>
+                    </div>
                 </div>
-                <div class="option">
-                    <span>Bonuses</span>
-                    <img src="icon/Star 1.svg" alt="icon-bonuses">
-                    <span>1230</span>
-                </div>
-                <div class="option">
-                    <span>Books</span>
-                    <img src="icon/book.svg" alt="icon-book">
-                    <span>2</span>
-                </div>
+                <p class="profile-lst-title">Rented books</p>
+                <ul class="profile-lst">
+                    <li>The Last Queen, Clive Irving</li>
+                    <li>Dominicana, Angie Cruz</li>
+                </ul>
+                <span> Card number</span>
+                <span class="card-numb"> F00234030</span>
+                <img src="icon/icon copy.svg" alt="copy icon">
             </div>
         </div>
     </div>
+    <!--Buy a card-->
+    <div class="modal modal-buy-card not-active">
+        <div class="buy-card-title">
+            <p>Buy a library card</p>
+            <button class="close-btn">
+                <img src="icon/closebtn2.svg" alt="close_btn">
+            </button>
+        </div>
+        <div class="buy-card-info">
+            <form>
+                <label class="modal-label">Bank card number
+                    <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">Expiration code <br>
+                      <input class="modal-input2" type="text">
+                      <input class="modal-input2" type="text">
+                  </label>
+                  <br>
+                  <label class="modal-label">CVC<br>
+                    <input class="modal-input2 cvc-input" type="text">
+                  </label>
+                  <br>
+                  <label class="modal-label cardholder-name">Cardholder name
+                      <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">Postal code
+                    <input class="modal-input" type="text">
+                  </label>
+                  <label class="modal-label">City / Town
+                      <input class="modal-input" type="text">
+                  </label>
+                  <button class="modal-submit-btn" type="submit">Buy</button>
+                  <span class="card-price">&#36; 25.00</span>
+              </form>
+            </form>
+            <div class="buy-card-discription">
+                <p>If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.</p>
+            </div>
+        </div>
+    </div>
+    <!--JS-->
     <script src="index.js"></script>
     <script src="burger.js"></script>
 </body>

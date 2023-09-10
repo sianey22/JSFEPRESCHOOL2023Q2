@@ -866,12 +866,12 @@ h2{
     margin: 15px;
 }
 
-.log-reg-label{
+.modal-label{
     font-size: 15px;
     letter-spacing: 0.3px;
 }
 
-.log-reg-input{
+.modal-input{
     padding: 0 5px;
     border: 1px solid #BB945F;
     width: 100%;
@@ -887,7 +887,7 @@ h2{
     text-align: center;
 }
 
-.log-reg-submit-btn{
+.modal-submit-btn{
     display: block;
     border-radius: 2px;
     border: 1px solid #0C0C0E;
@@ -919,17 +919,23 @@ h2{
     text-decoration-line: underline;
 }
 
-.modal-profile {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
+.modal {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.modal-profile {
     width: 600px;
     height: 403px;
-    box-sizing: border-box;
+}
+
+.modal-profile-wrap {
+    display: flex;
+    flex-direction: row;
 }
 
 .modal-profile-left{
@@ -983,7 +989,11 @@ h2{
     background-color: #FFF;
 }
 
-.profile-title {
+.modal-profile-right .close-btn{
+    margin: 25px;
+}
+
+.my-profile-title {
     font-family: Forum;
     font-size: 40px;
     line-height: 20px;
@@ -1006,6 +1016,123 @@ h2{
 
 .option img {
     width: 20px;
+}
+
+.option-title {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+.option-numb {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.2px;
+}
+
+.profile-lst-title {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px; 
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.profile-lst {
+    margin-bottom: 37px;
+}
+
+.profile-lst li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 2px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.card-numb {
+    margin: 0 10px;
+    color:#BB945F;
+}
+
+.modal-buy-card {
+    width: 650px;
+}
+
+.buy-card-title{
+    padding: 20px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.buy-card-title .close-btn {
+    right: 8px;
+    top: 10px;
+    background-color: #000;
+}
+
+.buy-card-title p {
+    color: #FFF;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.buy-card-info {
+    display: flex;
+    background: #FFF;
+    padding: 27px 40px 40px;
+    gap: 40px;
+}
+
+.buy-card-info form {
+    width: 200px;
+}
+
+.buy-card-info .modal-input{
+    margin: 9px 0 7px;
+}
+
+.modal-input2{
+    padding: 0 5px;
+    border: 1px solid #BB945F;
+    width: 45px;
+    height: 20px;
+    margin: 9px 4px 7px 0;
+    box-sizing: border-box;
+}
+
+.cvc-input{
+    margin-bottom: 20px;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position:absolute;
+    bottom: 40px;
+    left: 140px;
+}
+
+.buy-card-discription{
+    width: 330px;
+    height: 160px;
+}
+
+.buy-card-discription p{
+    color: #8E8E8E;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
 }
 
 @media (max-width: 1260px){
