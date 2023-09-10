@@ -43,6 +43,7 @@ const loginButton = document.querySelector('.button-log')
 const profileRegisterButton = document.querySelector('.register')
 const closeModalButton = document.querySelectorAll('.close-btn')
 const logRegLink = document.querySelectorAll('.log-reg-link')
+const buyButton = document.querySelectorAll('.button-buy');
 
 
 const openModal = function(e){
@@ -68,7 +69,7 @@ profileLoginButton.addEventListener('click',() =>openModal(modalLoginRegister[0]
 profileRegisterButton.addEventListener('click', ()=>openModal(modalLoginRegister[1]))
 
 loginButton.addEventListener('click',() =>openModal(modalLoginRegister[0]));
-signUpButton.addEventListener('click', ()=>openModal(modalLoginRegister[1]))
+signUpButton.addEventListener('click', ()=>openModal(modalLoginRegister[1]));
 
 logRegLink[0].addEventListener('click',() =>openAndClose(modalLoginRegister[1], modalLoginRegister[0]));
 logRegLink[1].addEventListener('click',() =>openAndClose(modalLoginRegister[0], modalLoginRegister[1]));
@@ -78,3 +79,8 @@ for (let i=0; i<2; i++){
     modalBackground.addEventListener('click',()=>closeModal(modalLoginRegister[i]))
 }
 
+const myProfileButton = document.querySelector('.profile-btn');
+
+myProfileButton.addEventListener('click', ()=>openModal(document.querySelector('.modal-profile')));
+closeModalButton[2].addEventListener('click', ()=>closeModal(document.querySelector('.modal-profile')));
+modalBackground.addEventListener('click',()=>closeModal(document.querySelector('.modal-profile')));

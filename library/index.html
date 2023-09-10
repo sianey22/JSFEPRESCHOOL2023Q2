@@ -47,8 +47,8 @@
                 <div class="profile profile-with-auth">
                     <span class="profile-title">Profile</span>
                     <div class="profile-line"></div>
-                    <button class="profile-button log-in">Profile</button>
-                    <button class="profile-button register">Log Out</button>
+                    <button class="profile-button profile-btn">My profile</button>
+                    <button class="profile-button log-out-btn">Log Out</button>
                 </div>
                 <button class="menu-burger-button">
                     <span></span>
@@ -186,7 +186,7 @@
                             <p class="book-info book-author">By Clive Irving</p>
                             <p class="book-description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
                             <img class="book-img" src="img/winter-book4.png" alt="fourth book">
-                            <button class="button-buy" disabled>Buy</button>
+                            <button class="button-buy">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -558,43 +558,43 @@
     <!--Modal windows-->
     <div class="modals-background not-active"></div>
     <!--LogIn-->
-    <div class="window-log-reg not-active">
+    <div class="window-log-reg window-log-in not-active">
         <button class="close-btn">
             <img src="icon/close_btn.svg" alt="close_btn">
         </button>
         <p class="window-title">Login</p>
-        <form>
+        <form class="log-in-form" action="#">
             <label class="modal-label">E-mail or readers card
-              <input class="modal-input" type="email" placeholder=" " required />
+              <input class="modal-input" name="email" type="email" placeholder=" " required />
             </label>
             <label class="modal-label">Password
-                <input class="modal-input" type="password" placeholder=" " minlength="8" required />
+                <input class="modal-input" name="password" type="password" placeholder=" " minlength="8" required />
             </label>
-            <button class="modal-submit-btn" type="submit">Log In</button>
+            <button class="modal-submit-btn log-in-btn" type="submit">Log In</button>
             <span class="log-reg-question">Don’t have an account?</span>
             <span class="log-reg-link">Register</span>
         </form>
     </div>
     <!--Register-->
-    <div class="window-log-reg not-active">
+    <div class="window-log-reg window-sign-up not-active">
         <button class="close-btn">
             <img src="icon/close_btn.svg" alt="close_btn">
         </button>
         <p class="window-title">Register</p>
-        <form>
+        <form class="sign-up-form" action="#">
             <label class="modal-label">First name
-              <input class="modal-input" type="text" placeholder=" " required />
+              <input class="modal-input" name="first_name" type="text" placeholder=" " required />
             </label>
             <label class="modal-label">Last name
-                <input class="modal-input" type="text" placeholder=" " required />
+                <input class="modal-input" name="last_name" type="text" placeholder=" " required />
             </label>
             <label class="modal-label">E-mail
-                <input class="modal-input" type="email" placeholder=" " min="1" required />
+                <input class="modal-input" name="email" type="email" placeholder=" " min="1" required />
             </label>
             <label class="modal-label">Password
-                <input class="modal-input" type="password" placeholder=" " minlength="8" required />
+                <input class="modal-input" name="password" type="password" placeholder=" " minlength="8" required />
             </label>
-            <button class="modal-submit-btn" type="submit">Sign Up</button>
+            <button class="modal-submit-btn sign-up-btn" type="submit">Sign Up</button>
             <span class="log-reg-question">Already have an account?</span>
             <span class="log-reg-link">Login</span>
         </form>
@@ -619,7 +619,7 @@
                     <div class="option">
                         <span class="option-title">Visits</span>
                         <img src="icon/Union.svg" alt="icon-union">
-                        <span class="option-numb">23</span>
+                        <span class="option-numb visits">23</span>
                     </div>
                     <div class="option">
                         <span class="option-title">Bonuses</span>
@@ -637,9 +637,9 @@
                     <li>The Last Queen, Clive Irving</li>
                     <li>Dominicana, Angie Cruz</li>
                 </ul>
-                <span> Card number</span>
+                <span> Card number</span>&nbsp;
                 <span class="card-numb"> F00234030</span>
-                <img src="icon/icon copy.svg" alt="copy icon">
+                <img class="copy-button" src="icon/icon copy.svg" alt="copy icon">
             </div>
         </div>
     </div>
@@ -688,4 +688,5 @@
     <script src="buttons.js"></script>
     <script src="carousel.js"></script>
     <script src="radio.js"></script>
+    <script src="auth.js"></script>
 </body>
