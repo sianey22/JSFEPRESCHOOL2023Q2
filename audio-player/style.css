@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.audio {
+    visibility: hidden;
+}
+
+.player {
+    overflow: hidden;
+    height: 300pt;
+    width: 250pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.player-buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 66%;
+    padding-top: 8%;
+    padding-left: 10%;
+    background: -webkit-linear-gradient(45deg, rgb(40, 40, 40), rgb(133, 133, 133));
+}
+
+.player-img {
+    position: absolute;
+    width: 103%;
+    top: -7%;
+}
+
+.play-stop-button {
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.forward-button, .backward-button {
+    width: 30px;
+    filter: invert(1);
+    position: absolute;
+    right: 10%;
+    cursor: pointer
+}
+
+.backward-button {
+    top: 13%;
+}
+
+.forward-button {
+    top: 37%;
+}
+
+.song-title {
+    color: rgb(193, 255, 6);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 4%;
+}
+
+.song-name {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    position: absolute;
+    top: 38%;
+    left: 29%;
+}
+
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    background: black;
+    cursor: pointer;
+    width: 64%;
+    height: 0.4rem;
+    position: absolute;
+    left: 18%;
+    bottom: 17%;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgb(193, 255, 6);
+    height: 0.6rem;
+    width: 0.5rem;   
+    border-radius:40%;  
+ }
+
+.current-time {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    bottom: 4%;
+    left: 18%;
+}
+
+.duration {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: rgb(193, 255, 6);
+    position: absolute;
+    bottom: 24%;
+    right: 18%;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    z-index: 10;
+}
+
+.list {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.list li {
+    padding: 0 10px;
+}
+
+.list li span{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-info{
+    filter:invert(1)
+}
