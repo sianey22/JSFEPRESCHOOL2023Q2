@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Audio player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <img class= "background" src="./assets/img/lemonade.png">
+        <audio class="audio" src="./assets/audio/beyonce.mp3"></audio>
+        <div class="player">
+            <img class="player-img" src="./assets/img/lemonade.png">
+            <div class="player-buttons">
+                <img class="play-stop-button" src="./assets/svg/play.png">
+                <span class="song-title">Beyonce</span>
+                <span class="song-name">Don't Hurt Myself</span>
+                <img class="backward-button" src="./assets/svg/backward.png">
+                <img class="forward-button" src="./assets/svg/forward.png">
+                <div class="time">
+                    <span class="current-time">0:00</span>
+                    <input type="range" class="progress-bar" max="233" value="0">
+                    <span class="duration">3:53</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="flooter-cont">
+            <ul class="list">
+                <li>
+                    <a href="https://github.com/sianey22">
+                        <img class="footer-info" src="./assets/img/github.png" alt="GitHub Logo" width="40">
+                    </a>
+                </li>
+                <li>
+                    <span class="footer-info" class="year">2023</span>
+                </li>
+                <li>
+                    <a href="https://rs.school/js/">
+                        <img class="footer-info" src="./assets/img/rs.png" alt="RS logo" width="80">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
