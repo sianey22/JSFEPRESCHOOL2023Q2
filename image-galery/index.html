@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Image galery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Unsplash API</h1>
+            <form class="search-form" action="#">
+                <label for="input-info">
+                    <input name="search" type="text" id="input-info" placeholder="Search..." autocomplete="off" autofocus required>
+                </label>
+                <button type="submit" class="search-button">
+                    <img src="./icons/icons8-search.svg" alt="search-icon">
+                </button>
+                <img src="./icons/close-svgrepo-com.svg" alt="close-icon" width="30" class="close-button">
+            </form>
+            <span class="line"></span>
+        </header>
+        <main>
+            <div class="img-container">
+            </div>
+        </main>
+        <footer class="footer">
+            <span class="line footer-line"></span>
+            <div class="flooter-cont">
+                <ul class="list">
+                    <li>
+                        <a href="https://github.com/sianey22">
+                            <img class="footer-info" src="./img/github.png" alt="GitHub Logo" width="40">
+                        </a>
+                    </li>
+                    <li>
+                        <span class="footer-info" class="year">2023</span>
+                    </li>
+                    <li>
+                        <a href="https://rs.school/js/">
+                            <img class="footer-info" src="./img/rs.png" alt="RS logo" width="80">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
