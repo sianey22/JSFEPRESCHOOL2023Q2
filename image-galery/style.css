@@ -87,11 +87,13 @@ h1 {
     height: 214px;
     place-self: center center;
     overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img {
     width: 100%;
-    cursor: pointer;
     transition: 1s;
 }
 
