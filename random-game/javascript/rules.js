@@ -10,7 +10,7 @@ const resultPoints = document.querySelector(".point");
 const mainMenu = document.querySelector(".button-main-menu")
 
 let firstCard;
-let secondCard;
+let secondCard=null;
 let count = 0;
 
 const iconsArrayData = ["bird", "cow", "crab", "elephant", "frog", "monkey", "snake","whale"];
@@ -61,7 +61,7 @@ const localResult = (result)=>{
 }
 
 const ruleFunction = (el) => { 
-    if (!findedCard.includes(el.classList[1]) && !el.querySelector(".card-front").classList.contains("flip-show")&&play.classList.contains("button-hidden")){
+    if (secondCard==null&&!findedCard.includes(el.classList[1]) && !el.querySelector(".card-front").classList.contains("flip-show")&&play.classList.contains("button-hidden")){
         if (count==0) {
             flipCard(el);
             firstCard = el;
@@ -74,10 +74,14 @@ const ruleFunction = (el) => {
             if (firstCard.classList[1]==secondCard.classList[1]){
                 count=0;
                 findedCard.push(firstCard.classList[1]);
+                secondCard=null;
             }
             else{
-                setTimeout(()=>flipCard(secondCard), 500);
-                setTimeout(()=>flipCard(firstCard), 500)
+                setTimeout(()=>{
+                    flipCard(secondCard);
+                    flipCard(firstCard);
+                    secondCard=null;
+                }, 500);
                 }
                 count=0;
     }
