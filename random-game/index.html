@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Forum' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <title>Image galery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/gamebuttons.css">
+    <link rel="stylesheet" href="style/footer.css">
+</head>
+<body>
+    <div class="win-modal-window hidden">
+        <div class="modal-background"></div>
+        <div class="modal-container">
+            <h2>You won!</h2>
+            <div class="results">
+                <p>Result</p>
+                <p class="point">0</p>
+            </div>
+            <div class="modal-buttons">
+                <!-- <button>Results</button> -->
+                <button class="button-main-menu">Play again</button>
+            </div>
+        </div>
+    </div> 
+    <header class="header">
+        <h1>Memory Game</h1>
+    </header>
+    <main class="main">
+        <div class="game-container">
+            <button class="button-start">Start</button>
+            <div class="game-function hidden">
+                <div class="time">
+                    <img src="assets/icons/timer.svg">
+                    <p class="timer">0:00</p>
+                </div>
+                <div class="game-buttons">
+                    <img class="reset" src="assets/icons/restart.svg" alt="reset button">
+                    <img class="play button-hidden" src="assets/icons/play.svg" alt="stop button">
+                    <img class="pause" src="assets/icons/pause.svg" alt="play button">
+                </div>
+            </div>
+            <div class="card-table hidden">
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="flooter-cont">
+            <ul class="list">
+                <li>
+                    <a href="https://github.com/sianey22">
+                        <img class="footer-info" src="assets/img/github.png" alt="GitHub Logo" width="40">
+                    </a>
+                </li>
+                <li>
+                    <span class="footer-info" class="year">2023</span>
+                </li>
+                <li>
+                    <a href="https://rs.school/js/">
+                        <img class="footer-info" src="assets/img/rs.png" alt="RS logo" width="80">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="javascript/rules.js"></script>
+</body>
