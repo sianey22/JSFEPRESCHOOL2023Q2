@@ -1,0 +1,35 @@
+.game-function {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.time {
+    display: flex;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.game-buttons{
+    display: flex;
+    gap: 15px;
+    opacity: 0.6;
+}
+
+.pause, .reset, .time img {
+    width: 30px;
+}
+
+.play {
+    width: 35px;
+}
+
+
+.button-hidden {
+    display: none;
+}
+
+.game-function.hidden{
+    display: none;
+}
